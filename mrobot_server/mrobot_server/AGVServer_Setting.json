@@ -1,0 +1,36 @@
+{
+  "agv_id": "MRC250007A",
+  "broker": "111.230.7.154",
+  "port": 1883,
+  "wait_times": "1",
+  "local_ip": "192.168.192.233",
+  "register": {"building":"南山停车场","floor":-1},
+  "map_mapping": {
+    "ljm-shanbu.smap": "19"
+  },
+  "tasks_code":[200],
+  "power":{
+    "lowest_soc": 5,
+    "lowest_vlo": 2.5,
+    "max_charge_power": 95
+  },
+  "mode": {
+    "INFO9": {
+      "explanation": "mr_robot",
+      "COM": "/dev/usb2485",
+      "baudrate": 9600,
+      "bytesize": 8,
+      "parity": "N",
+      "stopbits": 1
+    }
+  },
+  "tasks": {
+    "Emergency_stop": {
+      "explanation": "Emergency_stop",
+      "module_name": "INFO9",
+      "on_or_off": "on",
+      "slave": 240,
+      "start_address": 2
+    }
+  }
+}
